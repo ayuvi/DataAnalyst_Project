@@ -1,0 +1,5 @@
+1. nominal: skala yang di berikan sebagai label saja tidak mengandung pengertian tingkatan
+2. ordinal: skala mengandung tingkatan
+3. interval: skala yang mempunyai sifat ordinal jaral(interval)
+4. Rasio : skala mempunyai sifat nominal ordinal dan interval serta mempunyai niai rasio antar objek yang di ukur
+

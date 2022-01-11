@@ -1,0 +1,19 @@
+Mengapa Pandas
+
+Gunanya adalah untuk merubah file flat kedalam bentuk dataframe. Pandas juga merupakan standar yang biasa digunakan untuk mengimport file sebagai dataframe. pandas memanipulasi dataframe dengan tujuan :
+
+Penyelidikan analisis data
+Selisih Data
+Data preprocessing
+Membangun models
+Visualisasi
+
+contoh:
+
+import pandas as pd
+
+filename = 'titanic.csv'
+data = pd.read_csv(filename)
+
+print
+(data.head())

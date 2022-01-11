@@ -1,0 +1,18 @@
+Creating a Database Engine
+
+
+Kita akan menggunakan SQLite sebagai database nya karena SQLite tergolong cepat dan simpel. Ada banyak paket yang dapat digunakan dalam sqlite termasuk salah satunya adalah sqlite3 dan SQLalchemy, dalam hal ini kita akan menggunakan SQLalchemy.
+
+# install package sqlacchemy;
+pip install sqlalchemy
+
+from sqlalchemy import create_engine
+
+engine = create_engine('sqlite:///Northwind_small.sqlite')
+
+table_name = engine.table_names()
+
+print(table_names)
+
+
+

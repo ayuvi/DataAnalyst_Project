@@ -1,0 +1,49 @@
+
+Alur dalam membuat pemanggilan query sql pada python :
+
+1. Import Package dan Function
+2. Membuat Database Engine
+3. Koneksikan ke Engine
+4. Mengisikan Query Database
+5. Menyimpan hasil Query ke Dataframe
+6. Menutup koneksi
+
+#####
+# 1. Import Package dan Function
+
+from sqlalchemy  import create_engine
+import pandas as pd
+
+# 2. Membuat Database Engine
+
+engine = create_engine('sqlite:///Northwind_small.sqlite')
+
+# 3. Koneksikan ke Engine
+
+con = engine.connect()
+
+# 4. Mengisikan Query Database
+
+rs = con.execute("SELECT * FROM Customer")
+
+# 5. Menyimpan hasil Query ke Dataframe
+
+df = pd.DataFrame(rs.fetchall())
+df.columns = rs.keys()
+
+# 6. close koneksi
+con.close()
+
+print(df)
+####
+
+# Contoh dengan konteks manager
+from sqlalchemy import create_engine
+import pandas as pd
+
+engine = create_engine('sqlite:///Northwind_small.sqlite')
+with engine.connect() as con :
+	rs = con.execute("SELECT CompanyName, Phone FROM Customer")
+	df = pd.DataFrame(rs.fetchmany(size=3))
+	df.column = rs.keys()
+print(df)

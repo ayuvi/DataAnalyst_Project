@@ -1,0 +1,130 @@
+DATA ANALYSIS COURSE WITH EXCEL
+
+10 WAYS ANALYS DATA USING EXCEL
+
+1. DESCRIPTIVE STATISTICS IN EXCEL (quick statistic)
+insert table control + T, and give a name "data" 
+find average amount and units from the table data
+find median data amount and units
+find min and max values from amount an units
+check original data and check your value 
+calculate quartile
+first quartile and third quartile
+calculate how many count of products with unique of data product and count function
+
+2. EXPLORATORY DATA ANALYSIS (EDA) with CF
+copy data in new sheets
+remove filter ctrl + shift + L
+select entire amount column ( ctrl + shift + down arrow )
+go to conditional formating
+choose color scale -> analyst color
+enable filter ctrl + shift + L
+sort largest to smallest
+select entire unit column
+conditional formating -> data bars
+sorting z -> A
+clear CF
+select amount -> CF -> top bottom -> above average -> ok -> filter by the collor
+clear rules -> cf -> apply top 10 items -> filter by color
+find duplicate values -> select column -> cf -> duplicate values
+
+3. sales analysis (with formula)
+- get data coutry(geography w/unique function to extract country names) unique(data[geography])
+or copy all data gegrapy -> select all -> data -> remove duplicate
+- how total amoaunt of each the countries
+sumifs ( sum values that meet specific condition, sumifs(data[amount[, data[geography],C6)
+apply curency formating ctrl + shift + 4
+copy to down
+- do it same in units,
+adding coma, ctrl + 1 -> nnumber -> zero decimal -> ok
+
+copy table to be a table presentaze better
+sort largest to smalles
+give the border
+disable gridlines
+insert new column
+copy formula amount
+select column -> CF -> data bars -> manage rules -> select data bars -> edited -> check show bar only ->choose collor -> apply
+
+4. sales analysis (with pivot)
+insert pivot table data
+drag geography to rows(as group by amount)
+drag amount and units of values
+right click on amount to number format & apply currency
+block amount and sort largest to smallest
+add amount again on the values edit for data bars view
+dissapear grand total : pivot analyze > design > grand total > off for rows and column
+add slicers by sales persons
+go to slicer option and check this 2 column
+
+5. Top 5 product by $ per unit
+go to blank sheet > insert > pivot table from table data > check add this data to the data model
+put product on rows, put amount and units on values
+find sales perunit value = right click on data pivot table > add measures
+measure name is sales per unit
+formula is [sum of amount] / [sum of unit]
+category is currency 
+decimal place = 2
+put sales perunit on values
+sort largest to smalles on sales perunit
+row label > value filters > top 10 > select 5 items
+
+6. anomaly data detection
+copy master data to blank sheets
+pick amount and unit column
+insert > x y scatter plot 
+
+second method :
+select amount column > insert > box plot
+select sales person and amount > insert > box plot
+
+7. best in category:
+insert pivot table > select table data
+put geograpy and sales person in rows
+put amount in value
+sort largest to smallest
+value filter top 1 item 
+copy table and filter bottom 1
+
+8.profits by product
+combine table and define cost per unit with xlookup from table products
+ambil product name dari table data lalu select all product column di table products dan specified kolumn nya cost perunit
+=XLOOKUP([@Product];products[Product];products[Cost per unit])
+
+calculate cost (total cost)
+define cost from cost perunit * unit
+
+calculate total profits
+insert pivot table from table data
+refresh for update field
+put product on rows
+put amount and cost on values
+adda measures total proft
+formula is sum of amount - sum of cost
+add total profit on values
+sort
+add slicer geography
+
+## Task
+dynamic country
+
+- quick summary 
+select a country from a master country
+select cell(e4) > data > data validation > specified list > point to range value on data master > ok
+
+number of transaction
+countifs data geography with e4 column
+
+total sales,cost,profit,quantity
+sumifs and average ifs for amount
+
+- by sales person
+unique sales person
+sumifs amount with data sales person and data geography
+sumifs units column also
+adding data bar on ammount
+
+adding if formula for icon
+conditional formating > icon set > manage rules > select and edit rules
+
+- last section 

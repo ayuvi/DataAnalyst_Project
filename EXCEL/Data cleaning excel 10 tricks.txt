@@ -1,0 +1,41 @@
+1. typing 2 top rows to extraction 
+jika flash fill tidak muncul tekan ctrl + E
+Flash fill (tab Data -> Data Tools -> Flash Fill)
+
+2. merubah value menjadi percentage
+type 100 in blank cell and copy
+select original range value > right click -> paste special -> click divide
+change percentage formating in bar
+
+- cara kedua : type 1% in blank cell , copy and select all row values -> paste special -> choose multiply -> ok
+
+3. remove blank rows
+select all your data and press F5 > click special > click on blanks > Ctrl + - > choose entire rows
+
+4. find common values between two list
+select all table > conditional formating > highlight rules > duplicate formating
+
+5. clean up format
+select all data > clear button > clear formats
+
+6. remove data spaces
+trim(select column) -> drag & down
+
+7. unstack data
+=select address, =select city, =select state
+drag down , select all > copy > right click paste as values
+select all > F5 > special > blank > ctrl + - > shift cells up
+
+8. duplicate combination
+select all data > data > remove duplicate > click all column > click ok
+
+9. remove yellow cells
+select all your data > ctrl + F > option > format > fill > choose color > ok > select data > ctrl + -
+
+10. extract numbers from text
+click number on 2 top row
+
+11. file name from full path
+select data > ctrl + H > format > clear find format > type *\ and .* for deleting format > replace all
+
+12. numbers formatted as text

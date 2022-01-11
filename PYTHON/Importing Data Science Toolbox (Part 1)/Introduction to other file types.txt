@@ -1,0 +1,37 @@
+Pickled
+
+Digunakan untuk serialisasi dan de-serialisasi struktur objek Python. Setiap objek di python dapat “di-pickled” sehingga dapat disimpan dalam disk. Apa yang dilakukan pickle ini adalah "serialisasi" objek terlebih dahulu sebelum menulisnya ke sebuah file.
+
+
+File yang digunakan : contoh.pickle
+
+
+# 1. Cara import file pickle
+
+import pickle
+
+with open('contoh.pickle', 'rb') as file
+	data = pickle.load(file)
+print(data)
+========================================================================================
+Excel
+
+Biasa digunakan dalam pengolahan data berbentuk tabel yang mana didalamnya terdapat beberapa kolom yang memiliki rumus-rumus tertentu, dalam hal ini kita akan mencoba untuk melihat nama dari sheet yang ada didalam sebuah file excel.
+
+
+File yang digunakan : contoh.xlsx
+
+
+2. Cara import file excel
+
+
+Install package xlrd dengan cara :
+pip install xlrd
+
+import pandas as pd
+
+file = 'contoh.xlsx'
+
+data = pd.ExcelFile(file)
+
+print(data.sheet_names)

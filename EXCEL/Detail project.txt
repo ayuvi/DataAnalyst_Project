@@ -1,0 +1,17 @@
+Median = mid point of your data , when it is arranged in ascending (or descending) order
+average = total sum of all values divided by count of values
+quartiles = refer to 1/4th or 3/4th points in your data when it is arranged in sort order
+
+SUMIFS
+Sum add values that meet specific conditions
+
+QUARTILES 
+refer to 1/4th or 3/4th points in yout data when it is arranged in sort order
+
+ctrl + T = make table 
+click column and ctrl + shift + L = filter table
+ctrl + D = copy formulas
+
+CTRL + shift + down arrow = blocking column 
+ctrl + shift + 4 = adding currency
+ctrl + 1 = numbering
